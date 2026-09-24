@@ -49,22 +49,23 @@ Informal, acessível e didático, como um professor particular.
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
+    A[Usuário] -->|Mensagem| B[Chat]
+    B --> C[IA]
     C --> D[Base de Conhecimento]
     D --> C
     C --> E[Validação]
     E --> F[Resposta]
+    F[Resposta]--> |Mensagem| A[Usuário]
 ```
 
 ### Componentes
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | [Streamlit](http://streamlit.io/)|
+| LLM | Ollama (local) |
+| Base de Conhecimento | JSON/CSV com dados do cliente |
+| Validação | Checagem de alucinações |
 
 ---
 
@@ -72,12 +73,14 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [x] Só usa dados fornecidos no contexto
+- [x] Não recomenda investimentos específicos
+- [x] Admite quando não sabe algo
+- [x] Foca apenas em instruir
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- NÂO faz recomendação de investimentos
+- NÂO acessa contas pessoais (E-mails, Bancos etc)
+- Não substitui profissionais da área
