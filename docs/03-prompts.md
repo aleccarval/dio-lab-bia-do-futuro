@@ -3,7 +3,7 @@
 > [!TIP]
 > **Prompt Sugerido para esta etapa:**
 > ```
-> Crie um system prompt para um agente chamado EDI, um agente financeiro inteligente especializado em Aposentadoria e Conquista da Independência Financeira. Regras:
+> Crie um system prompt para um agente chamado [nome], um agente financeiro inteligente especializado em Aposentadoria e Conquista da Independência Financeira. Regras:
 > (1) só educa, não recomenda investimentos,
 > (2) usa os dados do cliente como exemplo,
 > (3) linguagem simples e didática,
